@@ -1,0 +1,33 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?1650cab0e6e985fe4eb236071ccfd951") format("truetype"),
+url("./flaticon.woff?1650cab0e6e985fe4eb236071ccfd951") format("woff"),
+url("./flaticon.woff2?1650cab0e6e985fe4eb236071ccfd951") format("woff2"),
+url("./flaticon.eot?1650cab0e6e985fe4eb236071ccfd951#iefix") format("embedded-opentype"),
+url("./flaticon.svg?1650cab0e6e985fe4eb236071ccfd951#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "microwave": "\f101",
+    "washing-machine": "\f102",
+);
+
+.flaticon-microwave:before {
+    content: map-get($flaticon-map, "microwave");
+}
+.flaticon-washing-machine:before {
+    content: map-get($flaticon-map, "washing-machine");
+}
